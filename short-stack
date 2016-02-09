@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+program.version('2.0.0');
+
+program
+  .command('install [name]')
+  .description('[not implemented] adds a new layer to your stack');
+
+program
+  .command('uninstall [name]')
+  .alias('remove')
+  .description('[not implemented] removes a layer from your stack')
+  .action(function (name) {
+    console.log('uninstalling %s', name);
+  });
+
+program
+  .command('search [query]')
+  .description('[not implemented] find new layers for your stack');
+
+program
+  .command('list')
+  .description('[not implemented] list current layers in your stack');
+
+program
+  .command('update')
+  .description('[not implemented] updates your stack' );
+
+program.parse(process.argv);

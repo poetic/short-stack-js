@@ -13,16 +13,21 @@
     "cli"
   ],
   "author": "Matthew Hager <matthew@poeticsystems.com>",
-  "contributors": [{
-    "name": "Luke Martin",
-    "email": "luke@poeticsystems.com"
-  }],
+  "contributors": [
+    {
+      "name": "Luke Martin",
+      "email": "luke@poeticsystems.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/short-stack/short-stack/issues"
   },
   "homepage": "https://github.com/short-stack/short-stack#readme",
   "bin": {
-    "short-stack": "./short-stack.js"
+    "short-stack": "./short-stack"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
   }
 }

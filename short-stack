@@ -29,3 +29,5 @@ program
   .description('[not implemented] updates your stack' );
 
 program.parse(process.argv);
+
+if (!program.args.length) program.help();

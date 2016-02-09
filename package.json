@@ -1,0 +1,28 @@
+{
+  "name": "short-stack",
+  "version": "2.0.0",
+  "description": "Automate the installation and maintenance of your dev stack.",
+  "main": "short-stack.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/short-stack/short-stack.git"
+  },
+  "keywords": [
+    "ansible",
+    "stack",
+    "cli"
+  ],
+  "author": "Matthew Hager <matthew@poeticsystems.com>",
+  "contributors": [{
+    "name": "Luke Martin",
+    "email": "luke@poeticsystems.com"
+  }],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/short-stack/short-stack/issues"
+  },
+  "homepage": "https://github.com/short-stack/short-stack#readme",
+  "bin": {
+    "short-stack": "./short-stack.js"
+  }
+}

@@ -1,4 +1,4 @@
-![Short Stack](https://raw.githubusercontent.com/short-stack/short-stack/master/assets/short-stack.jpg)
+![Short Stack](https://raw.githubusercontent.com/short-stack/short-stack/master/short-stack.jpg)
 
 Automate and maintain your development environment in a highly modular fashion.
 

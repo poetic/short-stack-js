@@ -18,7 +18,7 @@ program
 
 program
   .command('add [role]')
-  .description('(semi-implemented) adds a new role to your stack')
+  .description('(semi-implemented) try the role RealLukeMartin.short-stack-tmux to test.')
   .action(function(role) {
     var add = require('./lib/add'),
     addRole = require('child_process').exec,

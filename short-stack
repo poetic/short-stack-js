@@ -17,6 +17,19 @@ program
   });
 
 program
+  .command('add [role]')
+  .description('(semi-implemented) adds a new role to your stack')
+  .action(function(role) {
+    var add = require('./lib/add'),
+    addRole = require('child_process').exec,
+    error,
+    stdout,
+    stderr;
+
+    add.exec(addRole, role, error, stdout, stderr);
+  });
+
+program
   .command('search [query]')
   .description('[not implemented] find new layers for your stack');
 

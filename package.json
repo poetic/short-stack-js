@@ -28,6 +28,7 @@
     "short-stack": "./short-stack"
   },
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "js-yaml": "^3.5.3"
   }
 }

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 var program = require('commander'),
+    yaml = require('js-yaml'),
+    fs   = require('fs'),
     error,
     stdout,
     stderr;

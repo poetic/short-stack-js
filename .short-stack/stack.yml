@@ -2,5 +2,5 @@
 - name: short-stack
   hosts: all
   roles:
-    - poetic.short-stack-mongodb
+
     - RealLukeMartin.short-stack-tmux

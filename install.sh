@@ -37,8 +37,9 @@ if [[ ! -d ~/.short-stack ]]; then
   git clone https://github.com/short-stack/short-stack.git ~/.short-stack
 fi
 
-# Install short-stack command
+# Link galaxy roles and Install short-stack command
 if [[ ! -L /usr/local/bin/short-stack ]]; then
+  sudo ln -s /usr/local/etc/ansible/roles/ ~/short-stack/.short-stack/roles
   sudo ln -s ~/.short-stack/short-stack /usr/local/bin/short-stack
 fi
 

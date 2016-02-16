@@ -21,7 +21,7 @@ program
 
 program
   .command('add [role]')
-  .description('(semi-implemented) try the role RealLukeMartin.short-stack-tmux to test.')
+  .description('add role to stack')
   .option("-r, --run", "install this role now")
   .action(function(role, options) {
     var add = require('./lib/add'),

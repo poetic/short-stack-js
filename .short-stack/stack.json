@@ -1,0 +1,10 @@
+[
+  {
+    "name": "short-stack",
+    "hosts": "all",
+    "roles": [
+      "test",
+      "anotherone"
+    ]
+  }
+]

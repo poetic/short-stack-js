@@ -5,17 +5,11 @@ var program = require('commander'),
     fs   = require('fs'),
     object = require('./.short-stack/stack.json'),
     doc = './.short-stack/stack.yml',
-    data = fs.readFileSync(doc),
     fd = fs.openSync(doc, 'a+'),
     jsontoyaml = yaml.dump(object),
-    buffer = new Buffer(jsontoyaml),
     error,
     stdout,
     stderr;
-
-fs.truncate(fd, 0, function(){console.log('done')});
-fs.writeFile(fd, buffer, 0, buffer.length);
-fs.close(fd);
 
 program.version('2.0.0');
 
@@ -37,10 +31,11 @@ program
   .option("-r, --run", "install this role now")
   .action(function(role, options) {
     var add = require('./lib/add'),
-    run = options.run;
+    buffer = new Buffer(jsontoyaml),
+    run = options.run,
     addRole = require('child_process').exec;
 
-    add.exec(addRole, role, run, error, stdout, stderr);
+    add.exec(addRole, role, run, object, fs, fd, buffer, error, stdout, stderr);
   });
 
 program

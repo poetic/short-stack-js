@@ -1,10 +1,7 @@
-[
-  {
-    "name": "short-stack",
-    "hosts": "all",
-    "roles": [
-      "test",
-      "anotherone"
-    ]
-  }
-]
+{
+  "name": "short-stack",
+  "hosts": "all",
+  "roles": [
+    "core"
+  ]
+}

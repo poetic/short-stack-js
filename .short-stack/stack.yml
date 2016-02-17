@@ -1,4 +1,4 @@
----
-- name: short-stack
-  hosts: all
-  roles:
+name: short-stack
+hosts: all
+roles:
+  - core

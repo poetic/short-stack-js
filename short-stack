@@ -31,11 +31,10 @@ program
   .option("-r, --run", "install this role now")
   .action(function(role, options) {
     var add = require('./lib/add'),
-    buffer = new Buffer(jsontoyaml),
     run = options.run,
     addRole = require('child_process').exec;
 
-    add.exec(addRole, role, run, object, fs, fd, buffer, error, stdout, stderr);
+    add.exec(addRole, role, run, object, fs, fd, error, stdout, stderr);
   });
 
 program

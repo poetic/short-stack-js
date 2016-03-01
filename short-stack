@@ -30,11 +30,14 @@ program
   });
 
 program
-  .command('remove [name]')
+  .command('remove [role]')
   .alias('rm')
   .description('[not implemented] removes a layer from your stack')
-  .action(function (name) {
-    console.log('removing %s', name);
+  .action(function (role) {
+    var remove = require('./lib/remove');
+    console.log('removing %s', role);
+
+    remove.exec(fs, object, role);
   });
 
 program

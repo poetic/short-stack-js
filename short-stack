@@ -18,14 +18,6 @@ program
   .description('[not implemented] adds a new layer to your stack');
 
 program
-  .command('uninstall [name]')
-  .alias('remove')
-  .description('[not implemented] removes a layer from your stack')
-  .action(function (name) {
-    console.log('uninstalling %s', name);
-  });
-
-program
   .command('add [role]')
   .description('add role to stack')
   .option("-r, --run", "install this role now")
@@ -35,6 +27,14 @@ program
     addRole = require('child_process').exec;
 
     add.exec(addRole, role, run, object, fs, fd, error, stdout, stderr);
+  });
+
+program
+  .command('remove [name]')
+  .alias('rm')
+  .description('[not implemented] removes a layer from your stack')
+  .action(function (name) {
+    console.log('removing %s', name);
   });
 
 program

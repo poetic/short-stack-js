@@ -42,7 +42,7 @@ program
 
 program
   .command('search [query]')
-  .description('searches for short-stack roles, if query is left blank it will display all short-stack roles available')
+  .description('searches for short-stack roles')
   .action(function(query) {
     var search = require('./lib/search'),
         searchQuery = require('child_process').exec;

@@ -61,10 +61,6 @@ program
     list.exec(lister, error, stdout, stderr);
   });
 
-program
-  .command('update')
-  .description('[not implemented] updates your stack' );
-
 program.parse(process.argv);
 
 if (!program.args.length) program.help();

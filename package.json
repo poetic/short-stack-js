@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
-    "js-yaml": "^3.5.3"
+    "js-yaml": "^3.5.5",
+    "align-yaml": "^0.1.8"
   }
 }

@@ -1,0 +1,25 @@
+---
+language: objective-c
+
+before_install:
+- brew update
+
+install:
+- sudo pip install ansible --quiet
+
+before_script:
+- cp tests/stack.yml ~/.stack.yml
+- cp tests/galaxy.yml ~/.galaxy.yml
+
+script:
+- bash <(curl -s curl -L https://raw.githubusercontent.com/poetic/short-stack/master/install.sh) --skip-short-stack
+- bash short-stack
+- >
+  short-stack
+  | grep -q 'changed=0.*failed=0'
+  && (echo 'Idempotence test: pass' && exit 0)
+  || (echo 'Idempotence test: fail' && exit 1)
+
+notifications:
+  slack:
+    secure: WlALVM9fEmrNqQQ0bMVpuwVuz7OSIHOrotDfT9shsvOY0/AoRCGFOHwlI7+JKg1WHjeY5OewAo9F1nyaFcuLOOFPhthzO8LFfVYpXwkq3XuxN8aMOi2ItPRC9LTqNIzFiYcgtNBLW81WCOH6WcHd/+sdJMP4itu7VWZk8/pCiDg=

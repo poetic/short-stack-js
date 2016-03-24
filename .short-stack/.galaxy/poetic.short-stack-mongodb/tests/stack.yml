@@ -1,0 +1,6 @@
+---
+- name: short-stack
+  hosts: all
+  roles:
+    - core
+    - mongodb

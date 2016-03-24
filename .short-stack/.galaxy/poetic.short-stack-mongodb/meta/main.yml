@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Matthew Hager
+  company: Poetic Systems
+  description: Installs MongoDB and adds launch agent.
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+   - name: Darwin
+     versions:
+      - 10.9
+      - 10.10
+  categories:
+   - system
+dependencies: []

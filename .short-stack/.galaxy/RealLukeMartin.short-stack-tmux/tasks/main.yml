@@ -1,0 +1,6 @@
+---
+- name: ensures tmux is installed/updated
+  homebrew: name=tmux state=latest
+  
+- name: create this-is-a-test.txt
+  file: path=~/this-is-a-test.txt state=touch

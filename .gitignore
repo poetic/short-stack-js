@@ -1,2 +1,4 @@
 .vagrant
-.short-stack/roles
+.short-stack/.galaxy/*
+!.short-stack/.galaxy/.gitkeep
+

@@ -1,6 +1,8 @@
 [
   {
     "hosts": "all",
-    "roles": []
+    "roles": [
+      "RealLukeMartin.short-stack-tmux"
+    ]
   }
 ]

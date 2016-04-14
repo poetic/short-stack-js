@@ -1,4 +1,4 @@
 .vagrant
-.short-stack/.stack.d/roles/*
-!.short-stack/.stack.d/roles/.gitkeep
+.short-stack/stack.d/roles/*
+!.short-stack/stack.d/roles/.gitkeep
 

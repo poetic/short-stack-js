@@ -14,8 +14,14 @@ var program = require('commander'),
 program.version('2.0.0');
 
 program
-  .command('install [name]')
-  .description('[not implemented] adds a new layer to your stack');
+  .command('install')
+  .description('installs your stack')
+  .action(function () {
+    var install = require('./lib/install'),
+        installer = require('child_process').exec;
+
+    install.exec(installer, error, stdout, stderr);
+  });
 
 program
   .command('add [role]')

@@ -7,11 +7,12 @@ var program = require('commander'),
     doc = './.short-stack/stack.yml',
     fd = fs.openSync(doc, 'a+'),
     jsontoyaml = yaml.dump(object),
+    version = require('./package.json').version,
     error,
     stdout,
     stderr;
 
-program.version('2.0.0');
+program.version(version);
 
 program
   .command('install')

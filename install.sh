@@ -33,8 +33,8 @@ if ! command_exists ansible; then
 fi
 
 # Clone short-stack
-if [[ ! -d ~/.short-stack ]]; then
-  git clone https://github.com/short-stack/short-stack.git ~/.short-stack
+if [[ ! -d ~/short-stack ]]; then
+  git clone https://github.com/short-stack/short-stack.git ~/short-stack
 fi
 
 # Link galaxy roles and Install short-stack command

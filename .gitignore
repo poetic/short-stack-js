@@ -1,3 +1,4 @@
+node_modules
 .vagrant
 .short-stack/stack.d/roles/*
 !.short-stack/stack.d/roles/.gitkeep

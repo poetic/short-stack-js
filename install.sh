@@ -20,12 +20,6 @@ if ! command_exists brew; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Install node
-if ! command_exists node; then
-  echo 'Installing node...'
-  brew install node
-fi
-
 # Install ansible
 if ! command_exists ansible; then
   echo 'Installing ansible...'
@@ -34,12 +28,11 @@ fi
 
 # Clone short-stack
 if [[ ! -d ~/short-stack ]]; then
-  git clone https://github.com/short-stack/short-stack.git ~/short-stack
+  git clone https://github.com/short-stack/short-stack.git ~/.short-stack
 fi
 
-# Link galaxy roles and Install short-stack command
+# Install short-stack command
 if [[ ! -L /usr/local/bin/short-stack ]]; then
-  sudo ln -s /usr/local/etc/ansible/roles/ ~/short-stack/.short-stack/roles
   sudo ln -s ~/.short-stack/short-stack /usr/local/bin/short-stack
 fi
 

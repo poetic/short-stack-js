@@ -9,15 +9,20 @@
   },
   "keywords": [
     "ansible",
-    "stack",
+    "short-stack",
     "cli"
   ],
-  "author": "Matthew Hager <matthew@poeticsystems.com>",
+  "scripts": {
+    "build:webpack": "webpack",
+    "build:nexe": "nexe -i ./dist/bundle.js -o ss",
+    "prebuild": "npm run build:webpack",
+    "build": "npm run build:nexe",
+    "build:watch": "concurrently \"npm run build:webpack -- --watch\" \"onchange 'dist/bundle.js' -- npm run build:nexe\""
+  },
+  "author": "Poetic Systems, LLC <info@poeticsystems.com>",
   "contributors": [
-    {
-      "name": "Luke Martin",
-      "email": "luke@poeticsystems.com"
-    }
+    "Matthew Hager <matthew@poeticsystems.com>",
+    "Luke Martin <luke@poeticsystems.com>"
   ],
   "license": "MIT",
   "bugs": {
@@ -28,9 +33,18 @@
     "short-stack": "./short-stack"
   },
   "dependencies": {
-    "align-yaml": "^0.1.8",
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
-    "js-yaml": "^3.5.5"
+    "js-yaml": "^3.5.5",
+    "shelljs": "^0.7.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "concurrently": "^3.1.0",
+    "nexe": "^1.1.2",
+    "onchange": "^3.2.1",
+    "webpack": "^2.2.1"
   }
 }
